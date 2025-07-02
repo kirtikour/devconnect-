@@ -1,0 +1,81 @@
+.signup-container {
+  min-height: 100vh;
+  background-image: url("../assets/landing-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  z-index: 1;
+}
+
+.signup-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(30, 30, 30, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  color: white;
+}
+
+.signup-card input.form-control {
+  height: 48px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-card input.form-control::placeholder {
+  color: #aaa;
+}
+
+.signup-card input.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.signup-card .btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  height: 45px;
+  font-weight: 500;
+}
+
+.signup-card .btn-outline-light {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.signup-card .btn-outline-light:disabled {
+  opacity: 0.6;
+}
+
+.back-arrow {
+  font-size: 1.4rem;
+  color: #ffffff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  user-select: none;
+}
